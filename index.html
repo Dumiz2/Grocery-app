@@ -1,0 +1,111 @@
+<!--
+    Grocery App
+    Author: Dumisani Mthalane
+    Portions of this code and design are inspired by community examples and open source resources.
+    If you use or adapt this code, please retain this notice.
+    MIT License applies to all original and adapted code.
+    Example citation: https://github.com/automatejs/automate/tree/6046a62c9768a1fd240ad8c071f201946c93fa15/docs/binding.md
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery App</title>
+    <!-- Main stylesheet for layout and responsive design -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- App Header: Displays the main title -->
+    <header>
+        <h1>Welcome to Your Grocery App</h1>
+    </header>
+
+    <!-- Controls: Table selector and product management inputs/buttons -->
+    <div class="controls" style="text-align:center; margin:1rem 0;">
+        <label for="tableSelect">Choose a table:</label>
+        <select id="tableSelect">
+            <option value="table1">Grocery List 1</option>
+            <option value="table2">Grocery List 2</option>
+            <option value="table3">Grocery List 3</option>
+            <option value="table4">Grocery List 4</option>
+        </select>
+        <input id="search" placeholder="Product">
+        <input id="store" placeholder="Store">
+        <input id="price" placeholder="Price">
+        <button type="button">Add</button>
+        <button type="button" id="btnDelete">Delete</button>
+        <button type="button" id="btnClearAll">Clear All</button>
+    </div>
+            
+    <!-- Table Container: Holds all store tables side by side or stacked on mobile -->
+    <div class="table-container">
+        <!-- Store 1 Table -->
+        <div>
+            <h2>Store 1</h2>
+            <table id="table1" border="1">
+                <tr><th>Product</th><th>Store</th><th>Price</th></tr>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>Total</strong></td>
+                        <td id="total-table1">0</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <!-- Store 2 Table -->
+        <div>
+            <h2>Store 2</h2>
+            <table id="table2" border="1">
+                <tr><th>Product</th><th>Store</th><th>Price</th></tr>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>Total</strong></td>
+                        <td id="total-table2">0</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <!-- Store 3 Table -->
+        <div>
+            <h2>Store 3</h2>
+            <table id="table3" border="1">
+                <tr><th>Product</th><th>Store</th><th>Price</th></tr>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>Total</strong></td>
+                        <td id="total-table3">0</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <!-- Store 4 Table -->
+        <div>
+            <h2>Store 4</h2>
+            <table id="table4" border="1">
+                <tr><th>Product</th><th>Store</th><th>Price</th></tr>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>Total</strong></td>
+                        <td id="total-table4">0</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <!-- Cheapest Store Display: Shows which store has the lowest total -->
+    <div id="cheapest-store"></div>
+
+    <!-- Cheapest Basket Display: Shows the cheapest possible basket and savings info -->
+    <div id="cheapest-basket"></div>
+
+    <!-- App Footer: Copyright and closing info -->
+    <footer>
+        <p>&copy; 2025 Grocery App</p>
+    </footer>
+    <!-- Main JavaScript logic for app functionality -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* Base body styles: font, background, and text color */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #222;
+}
+
+/* Header styling: green background, white text, centered, with shadow */
+header {
+    background: #4caf50;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Footer styling: dark background, white text, centered, with spacing */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Form controls: consistent font size */
+label, select, input, button {
+    font-size: 1rem;
+}
+
+/* Inputs, selects, and buttons: spacing, padding, rounded corners, border */
+input, select, button {
+    margin: 0.3rem 0.5rem 0.3rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button styling: green background, white text, no border, pointer cursor, hover effect */
+button {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover {
+    background: #388e3c;
+}
+
+/* Table container: flex layout for responsive tables, spacing between tables */
+.table-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+/* Individual table card: white background, rounded corners, shadow, padding, width constraints */
+.table-container > div {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem;
+    min-width: 270px;
+    flex: 1 1 300px;
+    max-width: 350px;
+}
+
+/* Store title styling: green color, no top margin, slightly larger font */
+h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #388e3c;
+}
+
+/* Table styling: full width, collapsed borders, margin, light background */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0.5rem;
+    background: #fafafa;
+}
+
+/* Table cell padding and alignment */
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+/* Table header styling: light green background, dark text */
+th {
+    background: #e8f5e9;
+    color: #222;
+}
+
+/* Table footer (totals) styling: grey background, bold text */
+tfoot td {
+    background: #e0e0e0;
+    font-weight: bold;
+}
+
+/* Highlight boxes for cheapest store and basket: yellow accent, rounded, padding */
+#cheapest-store, #cheapest-basket {
+    background: #fffde7;
+    border-left: 5px solid #ffeb3b;
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 600px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+}
+
+/* Responsive layout for tablets: stack tables vertically, adjust width */
+@media (max-width: 900px) {
+    .table-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .table-container > div {
+        max-width: 95vw;
+    }
+}
+
+/* Responsive layout for mobile: smaller header/footer, tighter padding, full-width controls */
+@media (max-width: 600px) {
+    header, footer {
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+    .table-container > div {
+        padding: 0.5rem;
+    }
+    input, select, button {
+        width: 95vw;
+        max-width: 400px;
+        margin-bottom: 0.5rem;
+    }
+}
